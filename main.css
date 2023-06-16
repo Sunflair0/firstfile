@@ -66,12 +66,12 @@ li {
 	text-align: center;
 	background-color: cadetblue;
 	font-weight: 800;
-transition: .3s all;
+	transition: .3s all;
 }
 
 li:hover {
 	background: white;
-/* transition: .3s all; */
+	/* transition: .3s all; */
 }
 
 footer {
@@ -89,24 +89,15 @@ footer {
 	border: rgb(180, 13, 88) 10px solid;
 	/* flex-direction: column; */
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-.flex1 {
+.flex {
 	display: flex;
 	border: rgb(38, 13, 180) 10px solid;
-	width: 30%;
-}
+	/* width: 30%; */
+	width: 150px;
 
-.flex2 {
-	display: flex;
-	border: rgb(255, 255, 255) 10px solid;
-	width: 30%;
-}
-
-.flex3 {
-	display: flex;
-	border: rgb(55, 247, 25) 10px solid;
-	width: 30%;
 }
 
 .box {
@@ -114,9 +105,7 @@ footer {
 	position: relative;
 	background-image: linear-gradient(rgb(213, 17, 17), orange);
 	height: 300px;
-	width: 100%;
 	border: black 5px solid;
-	/* transform: translateX(100px); */
 }
 
 
