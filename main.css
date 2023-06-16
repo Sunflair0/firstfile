@@ -16,8 +16,6 @@ nav li {
 
 a {
 	text-decoration: none;
-	border: 2px solid black;
-
 }
 
 header {
@@ -60,6 +58,20 @@ img {
 
 li {
 	list-style-type: square;
+	width: 100px;
+	margin: 1rem;
+	padding: 5px 10px;
+	border: 3px solid rgb(14, 4, 4);
+	border-radius: 20px;
+	text-align: center;
+	background-color: cadetblue;
+	font-weight: 800;
+transition: .3s all;
+}
+
+li:hover {
+	background: white;
+/* transition: .3s all; */
 }
 
 footer {
@@ -116,4 +128,9 @@ footer {
 	height: 150px;
 	width: 150px;
 	margin: auto;
+}
+
+button {
+	width: 50px;
+	margin: 2rem;
 }
