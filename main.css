@@ -50,7 +50,7 @@ img {
 	width: 60px;
 	margin: auto;
 	border-radius: 50%;
-	background: conic-gradient(burlywood  90deg, green  90deg);
+	background: conic-gradient(burlywood 90deg, green 90deg);
 	border: black 3px solid;
 	box-shadow: 4px 4px 2px #353333;
 }
@@ -93,10 +93,11 @@ footer {
 
 .flex {
 	display: flex;
-	border: rgb(38, 13, 180) 10px solid;
+	border: rgb(91, 89, 15) 10px solid;
+	margin-bottom: 10px;
 	/* width: 30%; */
-	width: 150px;
-
+	/* width: 150px; */
+	filter: drop-shadow(5px 5px 3px black);
 }
 
 .box {
@@ -105,14 +106,19 @@ footer {
 	background-image: linear-gradient(rgb(213, 17, 17), orange);
 	height: 300px;
 	border: black 5px solid;
+
 }
 
+.shadow_wrap {
+	filter: drop-shadow(-2px 6px 3px rgba(50, 50, 0, 0.77));
+	margin: auto;
+}
 
 .star {
 	display: flex;
 	position: relative;
 	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-	background: chartreuse;
+	background: repeating-linear-gradient(rgb(96, 6, 87), rgb(234, 83, 136), rgb(96, 6, 87));
 	height: 150px;
 	width: 150px;
 	margin: auto;
