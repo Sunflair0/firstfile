@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceland&family=Tenor+Sans&display=swap');
 
 body {
-	background: linear-gradient(rgb(105, 105, 242), rgb(114, 231, 114));
-	height: 90vh;
+	background: linear-gradient(50deg, rgb(164, 164, 235), rgb(157, 235, 157));
 }
 
 * {
