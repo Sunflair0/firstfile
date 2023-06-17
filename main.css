@@ -47,12 +47,12 @@ img {
 }
 
 .circle {
-	height: 80px;
-	width: 30px;
+	height: 60px;
+	width: 60px;
+	margin: auto;
 	border-radius: 50%;
-	background-color: burlywood;
+	background: conic-gradient(burlywood  90deg, green  90deg);
 	border: black 3px solid;
-	padding-right: 5rem;
 	box-shadow: 4px 4px 2px #353333;
 }
 
