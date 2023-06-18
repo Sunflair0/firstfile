@@ -2,6 +2,7 @@
 
 body {
 	background: linear-gradient(50deg, rgb(164, 164, 235), rgb(157, 235, 157));
+	display: flex;
 }
 
 * {
@@ -13,12 +14,15 @@ nav li {
 	list-style: none;
 }
 
-a {
-	text-decoration: none;
+.header_wrap {
+	display: flex;
+	flex-direction: column;
+	z-index: 10;
 }
 
 header {
 	width: 80%;
+	margin-bottom: 4rem;
 	background: repeating-conic-gradient(rgb(126, 111, 211) .002%, antiquewhite .045%);
 	border-bottom: black 3px solid;
 	border-top: black 3px solid;
@@ -27,6 +31,8 @@ header {
 	font-family: "Tenor Sans";
 	color: rgb(3, 3, 66);
 	text-transform: uppercase;
+	position: sticky;
+	top: 0;
 }
 
 .div_center {
@@ -43,22 +49,82 @@ img {
 	padding-right: 5rem;
 	width: fit-content;
 	box-shadow: 4px 4px 2px #353333;
+	background: rgba(255, 255, 255, 0.325);
+	filter: blur(6px);
 }
 
 .circle {
 	height: 60px;
 	width: 60px;
 	margin: auto;
+	margin-left: 2rem;
 	border-radius: 50%;
-	background: conic-gradient(burlywood 90deg, green 90deg);
-	border: black 3px solid;
-	box-shadow: 4px 4px 2px #353333;
+	background: conic-gradient(rgb(234, 125, 78) 90deg, green 90deg);
+	border: black 1px solid;
+	animation: rotate infinite 2s linear;
+}
+
+@keyframes rotate {
+	from {
+		rotate: 0deg;
+	}
+
+	to {
+		rotate: 360deg;
+	}
+}
+
+.circle_jr {
+	height: 10px;
+	width: 10px;
+	margin-left: 0rem;
+	border-radius: 50%;
+	background: burlywood;
+	border: black 1px solid;
+	animation: bubble infinite 1s linear;
+	animation-delay: calc(0.1s * var(--i));
+
+}
+
+.jr {
+display: flex;
+transform: translateX(-110%);
+/* height: 200px; */
+	z-index: 0;
+}
+
+@keyframes bubble {
+
+	from {
+		opacity: 1;
+		transform: translateY(100px);
+	}
+
+	to {
+		opacity: 0;
+		transform: translateY(-100px);
+	}
+
+}
+
+.btn_style {
+	display: flex;
+	flex-direction: column;
 }
 
 li {
 	list-style-type: square;
-	width: 100px;
 	margin: 1rem;
+}
+
+nav {
+	display: flex;
+}
+
+nav a {
+	text-decoration: none;
+	border: black 3px solid;
+	width: 100px;
 	padding: 5px 10px;
 	border: 3px solid rgb(14, 4, 4);
 	border-radius: 20px;
@@ -68,19 +134,23 @@ li {
 	transition: .3s all;
 }
 
-li:hover {
-	background: white;
-	/* transition: .3s all; */
+ul {
+position: sticky;
 }
 
-footer {
-	background-color: black;
-	color: antiquewhite;
-	font-family: "Iceland";
-	padding: 10px;
-	position: fixed;
-	bottom: 0;
-	width: 100%;
+a:hover {
+	background: white;
+}
+
+.transition {
+	transition: .3s all;
+}
+
+.rightFlex {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
 }
 
 .bigFlex {
@@ -94,7 +164,7 @@ footer {
 .flex {
 	display: flex;
 	border: rgb(91, 89, 15) 10px solid;
-	margin-bottom: 10px;
+	margin: 10px 5px;
 	/* width: 30%; */
 	/* width: 150px; */
 	filter: drop-shadow(5px 5px 3px black);
@@ -104,9 +174,9 @@ footer {
 	display: flex;
 	position: relative;
 	background-image: linear-gradient(rgb(213, 17, 17), orange);
-	height: 300px;
+	height: 150px;
+	width: 150px;
 	border: black 5px solid;
-
 }
 
 .shadow_wrap {
@@ -119,12 +189,41 @@ footer {
 	position: relative;
 	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
 	background: repeating-linear-gradient(rgb(96, 6, 87), rgb(234, 83, 136), rgb(96, 6, 87));
-	height: 150px;
-	width: 150px;
+	height: 100px;
+	width: 100px;
 	margin: auto;
 }
 
-button {
-	width: 50px;
-	margin: 2rem;
+.song {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	font-size: x-large;
+	margin: auto;
+}
+
+img {
+	width: 400px;
+	border: black 2px solid;
+	margin-bottom: 2rem;
+	transition: .3s all;
+}
+
+img:hover {
+	scale: .9;
+}
+
+.verse {
+	line-height: 2;
+	margin: auto;
+	margin-bottom: 2rem;
+
+}
+
+footer {
+	background-color: black;
+	color: antiquewhite;
+	font-family: "Iceland";
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
