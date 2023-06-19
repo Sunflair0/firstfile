@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Iceland&family=Tenor+Sans&display=swap');
 
 body {
-	background: linear-gradient(50deg, rgb(164, 164, 235), rgb(157, 235, 157));
+	background: linear-gradient(50deg, rgb(34, 34, 221), rgb(164, 164, 235), rgb(189, 233, 189), rgb(11, 141, 11));
 	display: flex;
+	flex-direction: column;
+	background-size: contain;
+	height: 100vh;
+	scroll-behavior: smooth;
 }
 
 * {
@@ -14,24 +18,27 @@ nav li {
 	list-style: none;
 }
 
-.header_wrap {
+/* .header_wrap {
 	display: flex;
 	flex-direction: column;
 	z-index: 10;
-}
+} */
 
 header {
+	display: block;
+	margin-top: 3rem;
+	justify-self: center;
 	width: 80%;
 	margin-bottom: 4rem;
 	background: repeating-conic-gradient(rgb(126, 111, 211) .002%, antiquewhite .045%);
 	border-bottom: black 3px solid;
 	border-top: black 3px solid;
-	margin: 2rem auto;
+	margin-left: 2rem;
 	text-align: center;
 	font-family: "Tenor Sans";
 	color: rgb(3, 3, 66);
 	text-transform: uppercase;
-	position: sticky;
+	position: fixed;
 	top: 0;
 }
 
@@ -42,6 +49,7 @@ header {
 
 img {
 	box-shadow: 4px 4px 2px rgb(53, 51, 51);
+	cursor: pointer;
 }
 
 .border {
@@ -87,9 +95,9 @@ img {
 }
 
 .jr {
-display: flex;
-transform: translateX(-110%);
-/* height: 200px; */
+	display: flex;
+	transform: translateX(-110%);
+	/* height: 200px; */
 	z-index: 0;
 }
 
@@ -107,27 +115,28 @@ transform: translateX(-110%);
 
 }
 
-.btn_style {
-	display: flex;
-	flex-direction: column;
-}
+
 
 li {
 	list-style-type: square;
-	margin: 1rem;
+	margin: 1.25rem 0;
 }
 
 nav {
 	display: flex;
+	flex-direction: column;
+	width: 8rem;
+	/* justify-content: center; */
+	position: fixed;
 }
 
 nav a {
 	text-decoration: none;
 	border: black 3px solid;
-	width: 100px;
+	/* width: 120px; */
 	padding: 5px 10px;
-	border: 3px solid rgb(14, 4, 4);
-	border-radius: 20px;
+	border: 1px solid rgb(14, 4, 4);
+	border-radius: 10px;
 	text-align: center;
 	background-color: cadetblue;
 	font-weight: 800;
@@ -135,7 +144,7 @@ nav a {
 }
 
 ul {
-position: sticky;
+	position: sticky;
 }
 
 a:hover {
@@ -151,6 +160,8 @@ a:hover {
 	justify-content: center;
 	flex-direction: column;
 	width: 80%;
+	margin-top: 9rem;
+	margin-left: 9rem;
 }
 
 .bigFlex {
@@ -200,6 +211,10 @@ a:hover {
 	margin: auto;
 }
 
+#one {
+	margin-top: 10rem;
+}
+
 img {
 	width: 400px;
 	border: black 2px solid;
@@ -215,7 +230,58 @@ img:hover {
 	line-height: 2;
 	margin: auto;
 	margin-bottom: 2rem;
+}
 
+.calendar {
+	width: 90%;
+	margin-left: 6rem;
+	height: 70vh;
+}
+
+.week {
+	display: flex;
+	border: 2px solid black;
+	height: 10vh;
+}
+
+.day_wrapper {
+	display: flex;
+}
+
+.dayname {
+	border: 2px black solid;
+	height: 5vh;
+	width: 14.3%;
+}
+
+.dayname::before {
+	content: attr(dayname);
+	display: flex;
+	font-size: large;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.day {
+	border: 2px black solid;
+	height: 10vh;
+	width: 14.3%;
+}
+
+.day::before {
+	content: attr(day);
+	display: flex;
+	height: 20px;
+	width: 20px;
+	border: black 1px solid;
+}
+
+.day::after {
+	content: attr(weekend);
+	display: flex;
+	transform: translate(80%, 30%);
+	font-size: x-large;
 }
 
 footer {
